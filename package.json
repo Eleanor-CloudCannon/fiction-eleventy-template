@@ -1,0 +1,21 @@
+{
+  "name": "fiction-eleventy-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "@bookshop/browser": "3.5.1",
+    "@bookshop/eleventy-bookshop": "3.5.1",
+    "@bookshop/eleventy-engine": "3.5.1",
+    "@bookshop/generate": "3.5.1"
+  }
+}

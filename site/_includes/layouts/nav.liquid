@@ -1,0 +1,38 @@
+{% comment %}{{ if ne .Page.Title "Components" }} {% endcomment %}
+{% unless page.title == "Components" %}
+
+  <!-- Navigation -section
+  =========================--><nav class="navbar navbar-fixed-top navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button
+          type="button"
+          class="navbar-toggle"
+          data-toggle="collapse"
+          data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand logo" href="/">
+          <img src="{{ nav.logo.image }}" alt="{{ nav.logo.alt }}">
+        </a>
+      </div>
+
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right menu">
+          {% for item in nav.menu %}
+            <li>
+              <a href="{{ item.url }}" {% if item.open_in_new_tab == true %}target="_blank"{% endif %}>{{ item.name }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+  </nav>
+{% endunless %}

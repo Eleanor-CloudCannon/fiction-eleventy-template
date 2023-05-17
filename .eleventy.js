@@ -8,6 +8,12 @@ module.exports = function (eleventyConfig) {
     pathPrefix: '',
   })
   );
+  const CleanCSS = require("clean-css");
+module.exports = function(eleventyConfig) {
+  eleventyConfig.addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles;
+  });
+}
 
   // ...
   eleventyConfig.ignores.add("site/schemas");
@@ -16,6 +22,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("site/images");
   eleventyConfig.addPassthroughCopy("site/js");
   eleventyConfig.addPassthroughCopy("site/vendor");
+  eleventyConfig.addPassthroughCopy("theme.css");
+  eleventyConfig.addPassthroughCopy("site/assets");
   return {
     dir: {
       input: "site",

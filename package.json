@@ -4,18 +4,30 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:build": "bookshop-sass -b component-library -o site/css/bookshop.css",
+    "sass:watch": "bookshop-sass -b component-library -o site/css/bookshop.css -w",
+    "watch:sass": "sass --no-source-map --watch _sass:css",
+    "watch:eleventy": "eleventy --serve",
+    "build:sass": "sass --no-source-map _sass:css",
+    "build:eleventy": "eleventy",
+    "build": "npm-run-all build:sass build:eleventy",
+    "start": "npm-run-all build:sass --parallel watch:*"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "@bookshop/sass": "^3.5.1"
   },
   "dependencies": {
     "@bookshop/browser": "3.5.1",
     "@bookshop/eleventy-bookshop": "3.5.1",
     "@bookshop/eleventy-engine": "3.5.1",
-    "@bookshop/generate": "3.5.1"
+    "@bookshop/generate": "3.5.1",
+    "clean-css": "^5.3.2",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.56.1"
   }
 }

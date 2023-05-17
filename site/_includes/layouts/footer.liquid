@@ -1,0 +1,86 @@
+<footer class="footer">
+ 
+    <div class="container">
+        <div class="row">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="col-md-4">
+                        
+                        <!-- footer About section
+                        ========================== -->
+                        <div class="footer-about">
+                            <h3 class="footer-title">About</h3>
+                            <p>{{ footer.about.content }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                       
+                        <!-- footer Address section
+                        ========================== -->
+                        <div class="footer-address">
+                            <h3 class="footer-title">Address</h3>
+                            <p>{{ site.contact.address }}</p>
+                            <p class="contact-address">
+                                {% assign phone = replaceRE "(\\s)" "" site.contact.phone %}
+                                Contact us : <a href="tel:{{ phone }}">{{ site.contact.phone }}</a> <br>
+                                Write us : <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4"> 
+                        <!-- footer Media link section
+                        ========================== -->
+                        <div class="footer-social-media">
+                            <h3 class="footer-title">Keep in touch</h3>
+                            <ul class="footer-media-link">
+                                <li><a href="{{ site.social_media.facebook }}"><i class="tf-ion-social-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="{{ site.social_media.twitter }}"><i class="tf-ion-social-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="{{ site.social_media.linkedin }}"><i class="tf-ion-social-linkedin-outline" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="{{ site.social_media.google }}"><i class="tf-ion-social-google-outline" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="{{ site.social_media.instagram }}"><i class="tf-ion-social-instagram-outline" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-nav text-center">
+                    <div class="col-md-12">
+                        <ul>
+                            {% for item in footer.menu %}
+                            <li><a href="{{ item.url }}" {% if item.open_in_new_tab %}target="_blank"{% endif %}>{{ item.name }}</a></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="col-md-12">
+                        <div class="copyright">
+                            {{ site.copyright_html }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/plugins/jquery.min.js"></script>
+
+    <script src="/plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- slick slider -->
+    <script src="/plugins/slick/slick.min.js"></script> 
+    <!-- filter -->
+    <script src="/plugins/filterizr/jquery.filterizr.min.js"></script>
+    <!-- Lightbox -->
+    <script src="/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Parallax -->
+    <script src="/plugins/parallax.min.js"></script>
+    <!-- Video -->
+    <script src="/plugins/jquery.vide.js"></script>
+    <!-- google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_api_key}}"></script>
+    <script src="/plugins/google-map/gmap.js"></script>
+
+    <script src="/js/script.js" defer></script>
+</html>

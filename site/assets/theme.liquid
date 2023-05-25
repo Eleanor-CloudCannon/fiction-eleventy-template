@@ -1,6 +1,12 @@
 --- 
 permalink: site/theme.css
 ---
+
+{% include-all "/scss/*.scss" %}
+{% include-all "./site/_includes/assets/css/*.css" %}
+
+
+{% comment %}
 {% include "/assets/css/style.css" %}
 {% include "/assets/css/animate/animate.css" %}
 {% include "/assets/css/bootstrap/bootstrap.min.css" %}
@@ -8,5 +14,4 @@ permalink: site/theme.css
 {% include "/assets/css/maps/style.css.map" %}
 {% include "/assets/css/slick/slick.css" %}
 {% include "/assets/css/themefisher-fonts/themefisher-fonts.css" %}
-
-{% include "/assets/scss/style.scss" %}
+{% include "/assets/scss/style.scss" %}{% endcomment %}

@@ -27,6 +27,7 @@
     "@bookshop/eleventy-engine": "3.5.1",
     "@bookshop/generate": "3.5.1",
     "clean-css": "^5.3.2",
+    "fast-glob": "^3.2.12",
     "npm-run-all": "^4.1.5",
     "sass": "^1.56.1"
   }

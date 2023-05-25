@@ -30,9 +30,13 @@
     {{ if hugo.IsProduction }}
     {{ $css := $css | resources.Minify | resources.Fingerprint }} 
     {{ end }}{% endcomment %}
-    <link rel="stylesheet" href=" site/theme.css " /> 
 
-    {% comment %}{% endcomment %}
+
+  
+    <link rel="stylesheet" href="site/theme.css" /> 
+    <link rel="stylesheet" href="../../assets/scss/style.scss" />
+
+    {% comment %}
     {% capture css %}
       {% include "../../assets/css/style.css" %}
       {% include "../../assets/css/animate/animate.css" %}
@@ -47,7 +51,7 @@
       <style>
         {{ css }}
       </style>
-     
+     {% endcomment %}
 
 
       <style>

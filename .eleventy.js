@@ -1,4 +1,6 @@
 const pluginBookshop = require("@bookshop/eleventy-bookshop");
+const fg = require('fast-glob');
+const fs = require('fs');
 
 module.exports = function (eleventyConfig) {
   // ...
@@ -15,6 +17,16 @@ module.exports = function(eleventyConfig) {
   });
 }
 
+
+eleventyConfig.addShortcode("include-all", function(dir) {
+  const entries = fg.sync([dir], { dot: true });
+  let css = ""
+  for(entry in entries){
+      css += fs.readFileSync(entries[entry])
+  }
+  return css
+});
+
   // ...
   eleventyConfig.ignores.add("site/schemas");
   eleventyConfig.addPassthroughCopy("site/css");
@@ -24,6 +36,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("site/vendor");
   eleventyConfig.addPassthroughCopy("theme.css");
   eleventyConfig.addPassthroughCopy("site/assets");
+  eleventyConfig.addPassthroughCopy("site/assets/scss");
   return {
     dir: {
       input: "site",

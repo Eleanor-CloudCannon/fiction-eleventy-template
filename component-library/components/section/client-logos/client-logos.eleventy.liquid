@@ -1,0 +1,17 @@
+<!-- Clients Logo Sections
+=========================-->
+<section
+  class="clients-logo"
+  data-parallax="scroll"
+  data-image-src="{{ background_image }}">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        {% for items in client_logos %}
+          {% bookshop "generic/client-logo" %}
+        {% endfor %}
+      </div>
+      <!-- /.End row -->
+    </div>
+  </div>
+</section>

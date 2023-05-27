@@ -1,0 +1,5 @@
+<section class="case-study case-study--{{ background }}">
+  {% bookshop "generic/heading" include.heading %}{% comment %}
+    {{ range.left_right_blocks }}
+    {{ partial "bookshop" (slice "simple/left-right-block".) }}
+    {{ end }}{% endcomment %}</section>

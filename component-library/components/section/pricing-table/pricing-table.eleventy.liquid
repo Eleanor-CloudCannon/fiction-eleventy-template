@@ -1,0 +1,14 @@
+<!-- Pricing Table Sections 
+=========================-->
+<section class="pricing-table">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        {% bookshop "generic/heading" heading %}
+      </div>
+      {% for items in pricing_plans %}
+        {% bookshop "simple/pricing-plan" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

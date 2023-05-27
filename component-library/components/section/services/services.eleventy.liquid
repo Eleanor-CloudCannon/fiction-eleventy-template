@@ -1,0 +1,14 @@
+<!-- Service Item Sections 
+=========================-->
+<section class="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        {% bookshop "generic/heading" heading %}
+      </div>
+      {% for items in service %}
+        {% bookshop "simple/icon-and-content" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

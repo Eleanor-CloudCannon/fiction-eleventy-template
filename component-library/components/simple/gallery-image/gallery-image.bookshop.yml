@@ -2,9 +2,9 @@
 spec:
   structures:
     - ""
-  label: Client Logo
-  description: Client logo
-  icon: person_outline
+  label: Gallery Image
+  description: Single image link
+  icon: add_photo_alternate
   tags: []
 
 # Defines the structure of this component, as well as the default values
@@ -14,8 +14,7 @@ blueprint:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
-  image:  "https://placekitten.com/800/400"
-  image_alt: Client Logo
+  image: https://placekitten.com/800/400
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs: {}

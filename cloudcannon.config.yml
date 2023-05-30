@@ -10,20 +10,20 @@ collections_config:
       - visual
     schemas:
       page:
-        path: schemas/page.md
+        path: site/schemas/page.md
     filter:
       exclude:
         - components.md
   portfolios:
     schemas:
       default:
-        path: schemas/portfolio.md
+        path: site/schemas/portfolio.md
     _enabled_editors:
       - visual
   posts:
     schemas:
       default:
-        path: schemas/post.md
+        path: site/schemas/post.md
     _enabled_editors:
       - content
       - visual

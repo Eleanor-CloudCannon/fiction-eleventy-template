@@ -5,13 +5,29 @@
 # Here you can define your collections, as well as any
 # CloudCannon configuration specific to those collections.
 collections_config:
-  data:
-    path: _data
-    output: false
   pages:
-    path: pages
-    output: true
-    filter: strict
+    _enabled_editors:
+      - visual
+    schemas:
+      page:
+        path: schemas/page.md
+    filter:
+      exclude:
+        - components.md
+  portfolios:
+    schemas:
+      default:
+        path: schemas/portfolio.md
+    _enabled_editors:
+      - visual
+  posts:
+    schemas:
+      default:
+        path: schemas/post.md
+    _enabled_editors:
+      - content
+      - visual
+  
 
 # Control which collections are displayed in the CloudCannon site navigation,
 # and how those collections are grouped.
@@ -32,7 +48,7 @@ paths:
   data: _data
   collections: ''
   layouts: _includes
-  static: ''
+  static: site
   uploads: uploads
   includes: _includes
 

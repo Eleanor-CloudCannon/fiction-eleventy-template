@@ -16,7 +16,7 @@ blueprint:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
-  image: "https://placekitten.com/800/400"
+  image: /images/contact/contact-img1.png
   image_alt: "business image"
   portfolio_images:
     - image: "https://placekitten.com/800/400"

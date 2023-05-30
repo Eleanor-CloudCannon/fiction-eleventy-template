@@ -32,6 +32,7 @@ eleventyConfig.addShortcode("include-all", function(dir) {
   eleventyConfig.addPassthroughCopy("site/css");
   eleventyConfig.addPassthroughCopy("site/fonts");
   eleventyConfig.addPassthroughCopy("site/images");
+  eleventyConfig.addPassthroughCopy("site/video");
   eleventyConfig.addPassthroughCopy("site/js");
   eleventyConfig.addPassthroughCopy("site/vendor");
   eleventyConfig.addPassthroughCopy("theme.css");

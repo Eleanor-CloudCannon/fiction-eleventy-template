@@ -1,0 +1,5 @@
+{% include './layouts/head.liquid' %}
+{{ content }}
+{% block content %}
+  {% bookshop_include "page" content_blocks: content_blocks %}
+{% endblock %}

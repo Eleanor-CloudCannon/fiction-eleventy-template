@@ -4,15 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass:build": "bookshop-sass -b component-library -o site/css/bookshop.css",
-    "sass:watch": "bookshop-sass -b component-library -o site/css/bookshop.css -w",
-    "watch:sass": "sass --no-source-map --watch _sass:css",
-    "watch:eleventy": "eleventy --serve",
-    "build:sass": "sass --no-source-map _sass:css",
-    "build:eleventy": "eleventy",
-    "build": "npm-run-all build:sass build:eleventy",
-    "start": "npm-run-all build:sass --parallel watch:*"
+    "build:sass": "sass --no-source-map site/assets/scss:site/assets",
+    "watch:sass": "sass --no-source-map --watch site/assets/scss:site/assets",
+    "bookshop:watch": "bookshop-browser",
+    "bookshop-sass:build": "bookshop-sass -b component-library -o site/assets/bookshop.css",
+    "bookshop-sass:watch": "bookshop-sass -b component-library -o site/assets/bookshop.css -w",
+    "eleventy:build": "eleventy",
+    "eleventy:watch": "ELEVENTY_ENV=development eleventy --serve",
+    "start": "npm-run-all build:sass bookshop-sass:build --parallel bookshop-sass:watch bookshop:watch eleventy:watch"
   },
   "keywords": [],
   "author": "",

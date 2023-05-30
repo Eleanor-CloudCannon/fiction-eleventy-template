@@ -9,49 +9,13 @@
 
     {% comment %}
     {% assign js = resources.Get "js/build.js" %}
-    <script src="{% js.url %}"></script>
+    <script src="{% js.url %}"></script>{% endcomment %}
 
 
-    <!-- The bookshop_scss partial returns a slice of all SCSS resources from your Bookshop -->
-    {{ $bookshop_scss_files := partial "bookshop_scss" . }}
-    <!-- resources.Concat converts all of the above SCSS resources into one logical CSS file -->
-    {{ $bookscss := $bookshop_scss_files | resources.Concat "css/bookshop.css" |
-    resources.ToCSS }}
-    {% endcomment %}
+  <link rel="stylesheet" href="/assets/style.css" /> 
+  <link rel="stylesheet" href="css/bookshop.css" /> 
 
-    {% comment %}
-    <!-- fetch all *.css files in the ./assets/css/ folder and combine them -->
-    {{ $css := resources.Match "css/**/*.css" | resources.Concat "glob1.css" }}
-    <!-- fetch all *.scss files in the ./assets/scss/ folder and combine and convert to css -->
-    {{ $scss := resources.Match "scss/style.scss" | resources.Concat "glob2.css" | resources.ToCSS }}
-    <!-- combine all bookshop, css and scss files into one resources -->
-    {{ $css := slice $css $scss $bookscss | resources.Concat "main.css"  }}
-    <!-- minify and fingerprint css while in production -->
-    {{ if hugo.IsProduction }}
-    {{ $css := $css | resources.Minify | resources.Fingerprint }} 
-    {{ end }}{% endcomment %}
-
-
-  
-    <link rel="stylesheet" href="site/theme.css" /> 
-    <link rel="stylesheet" href="../../assets/scss/style.scss" />
-
-   {% comment %}  
-    {% capture css %}
-      {% include "../../assets/css/style.css" %}
-      {% include "../../assets/css/animate/animate.css" %}
-      {% include "../../assets/css/bootstrap/bootstrap.min.css" %}
-      {% include "../../assets/css/magnific-popup/magnific-popup.css" %}
-      {% include "../../assets/css/maps/style.css.map" %}
-      {% include "../../assets/css/slick/slick.css" %}
-      {% include "../../assets/css/themefisher-fonts/themefisher-fonts.css" %}
-
-    {% include "../../assets/scss/style.scss" %}
-      {% endcapture %}
-      <style>
-        {{ css }}
-      </style>
-    {% endcomment %}
+  <link rel="stylesheet" href="/theme.css" /> 
 
 
       <style>
@@ -129,5 +93,4 @@
       {% endif %}
 
       <meta name="twitter:title" content="{{ site.title }}" />{% endif %}
-  </html>
 </head>

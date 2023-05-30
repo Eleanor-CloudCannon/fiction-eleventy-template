@@ -1,54 +1,54 @@
 //Variables
-@import "scss/variables";
+@import "variables";
 
-@import "scss/typography";
+@import "typography";
 
 //Base
-@import "scss/common";
+@import "common";
 
 //Layout
-@import "scss/layout/header";
+@import "layout/header";
 
-@import "scss/layout/footer";
+@import "layout/footer";
 
 /* Home page style
 ====================== */
-@import "scss/layout/home";
+@import "layout/home";
 
-@import "scss/layout/hero-area";
+@import "layout/hero-area";
 
-@import "scss/layout/call-to-action";
+@import "layout/call-to-action";
 
-@import "scss/layout/pricing-table";
+@import "layout/pricing-table";
 
-@import "scss/layout/team";
+@import "layout/team";
 
 /* Services page style
 ====================== */
-@import "scss/layout/services";
+@import "layout/services";
 
 /* testimonials page style
 ====================== */
-@import "scss/layout/testimonials";
+@import "layout/testimonials";
 
 /* Portfolio Page and 
    Portfolio Single Page style
 ================================= */
-@import "scss/layout/portfolio";
+@import "layout/portfolio";
 
 /* blog page style
 ====================== */
-@import "scss/layout/blog";
+@import "layout/blog";
 
 /* Contact page style
 ====================== */
-@import "scss/layout/contact";
+@import "layout/contact";
 
 /* Search page style
 ====================== */
-@import "scss/layout/search";
+@import "layout/search";
 
 
 
-@import "scss/layout/responsive";
+@import "layout/responsive";
 

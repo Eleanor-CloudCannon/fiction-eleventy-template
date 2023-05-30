@@ -1,0 +1,7 @@
+.search-page {
+  padding: 60px 0;
+  background-color: #111111;
+}
+.search-page .pagefind-ui mark {
+  background-color: #facd8a;
+}

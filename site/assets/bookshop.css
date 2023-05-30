@@ -1,0 +1,92 @@
+@media all, bookshop {
+
+h2.title {
+  padding-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.case-study--black {
+  background-color: #121212;
+}
+
+.hero-area h1 {
+  color: #fff;
+}
+
+.content h4 {
+  padding-bottom: 13px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #facd8a;
+  font-weight: bold;
+}
+
+.content p {
+  font-size: 16px;
+  color: rgba(175, 175, 175, 0.8);
+}
+
+.content .btn {
+  margin-top: 30px;
+}
+
+.left-right-block--black {
+  background-color: #121212;
+}
+
+.left-right-block--grey {
+  background-color: #171717;
+}
+
+.left-right-block--right .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.left-right-block--right .row .col-md-6 {
+  grid-row: 1;
+  width: 100%;
+}
+@media only screen and (min-width: 1px) and (max-width: 991px) {
+  .left-right-block--right .row {
+    grid-template-columns: 1fr;
+  }
+  .left-right-block--right .row .col-md-6:last-child {
+    grid-row: 2;
+  }
+}
+
+.left-right-block--left .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.left-right-block--left .row .col-md-6 {
+  grid-row: 1;
+  width: 100%;
+}
+.left-right-block--left .row .col-md-6:first-child {
+  grid-column: 2;
+}
+.left-right-block--left .row .col-md-6:last-child {
+  grid-column: 1;
+}
+@media only screen and (min-width: 1px) and (max-width: 991px) {
+  .left-right-block--left .row {
+    grid-template-columns: 1fr;
+  }
+  .left-right-block--left .row .col-md-6:last-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .left-right-block--left .row .col-md-6:first-child {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+.slider-item h1 {
+  color: #facd8a;
+}
+
+}
